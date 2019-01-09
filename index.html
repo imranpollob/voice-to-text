@@ -5,12 +5,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <style>
+        body {
+            background-color: #34495E;
+            display: flex;
+            justify-content: center;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .words {
+            width: 50%;
+            background-color: white;
+            padding: 10px;
+        }
+
+        h2 {
+            text-align: center;
+        }
+    </style>
     <title>Voice to Text</title>
 </head>
 
 <body>
     <!-- The contenteditable attribute specifies whether the content of an element is editable or not. -->
-    <div class="words" contenteditable></div>
+    <div class="words" contenteditable>
+        <h2>Game Begins</h2>
+        <hr>
+    </div>
 
     <script>
         // window.SpeechRecognition is a Web Speech API
@@ -41,7 +63,7 @@
             }
 
             // scroll to bottom of the page
-            window.scrollTo(0,document.body.scrollHeight);
+            window.scrollTo(0, document.body.scrollHeight);
         });
 
         // this only works for one paragraph so we need to set recognition.addEventListener('end', recognition.start) again
